@@ -22,7 +22,8 @@
       "@/*": ["./*"],
       "@compontnets/*": ["./components/*"],
       "@lib/*": ["./lib/*"],
-      "@public/*": ["./public/*"]
+      "@public/*": ["./public/*"],
+      "@server/*": ["./server/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
