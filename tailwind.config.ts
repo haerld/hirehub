@@ -55,7 +55,8 @@ export default {
   		fontFamily: {
   			inter: ['var(--font-inter)'],
   			lexend: ['var(--font-lexend)'],
-  			poppins: ['var(--font-poppins)']
+  			poppins: ['var(--font-poppins)'],
+        roboto: ['var(--font-roboto)'],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
