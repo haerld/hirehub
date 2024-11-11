@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { redirect } from "next/navigation";
 import { RoleEnumsType } from "@lib/schema";
 import { authorizedRoles } from "./utils/filter-roles";
+import Header from "@components/dashboard/Header";
 
 interface FeatureCardProps {
 	iconSrc: string;
@@ -25,11 +26,7 @@ export default async function Home() {
 	}
 
 	return (<>
-		<div className="h-16 w-full content-center bg-[#F1F2F4]">
-			<div className="mx-12">
-			<h1 className="text-2xl font-bold text-black">Hirehub</h1>
-			</div>
-		</div>
+		<Header />
 
 		<section
 					className="xl:px-18 md:16 w-full p-10 sm:h-[50vh] sm:px-10 md:h-[60vh] lg:h-[65vh] lg:px-16 xl:h-[80vh] 2xl:px-20"
