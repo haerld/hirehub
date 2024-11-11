@@ -1,8 +1,8 @@
 import { revalidatePath } from "next/cache";
-import { DataExtractor } from "~/DataExtractor/Comment";
-import { CommentRepository } from "~/repository/CommentRepository";
-import { StageType } from "~/types/types";
-import { CommentType, Validator } from "~/Validator/Comment";
+import { DataExtractor } from "@server/utils/extractor/Comment";
+import { CommentRepository } from "@server/repository/CommentRepository";
+import { StageType } from "@server/utils/types";
+import { CommentType, Validator } from "@server/utils/validator/Comment";
 
 export class CommentService {
 	constructor(private readonly commentRepo: CommentRepository) {}
@@ -11,7 +11,7 @@ export class CommentService {
 		try {
 			return await this.commentRepo.getAllCommentsById(id);
 		} catch (error) {
-			throw new Error("Fetching all comments failed");
+			throw new Error("Fetching all comments failed: ", error!);
 		}
 	}
 
@@ -19,7 +19,7 @@ export class CommentService {
 		try {
 			return await this.commentRepo.getCommentsByID(id, commentId);
 		} catch (error) {
-			throw new Error("Fetching comments by ID failed");
+			throw new Error("Fetching comments by ID failed: ", error!);
 		}
 	}
 
