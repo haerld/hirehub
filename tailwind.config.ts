@@ -11,6 +11,14 @@ export default {
   theme: {
   	extend: {
   		colors: {
+			jobdetails: "#7F0000",
+			customgray: "#767F8C",
+			customgreen: "#0BA02C",
+			customlightgreen: "#E7F6EA",
+			customorange: "#FFCB78",
+			lightorange: "#FFF6E6",
+			gray: "#F1F2F4",
+			darkGray: "#767F8C",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
